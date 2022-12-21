@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <header class="header">
+                    <p>Step 1 </p>
+                    <h1>Account Info</h1>
+                </header>
+                <div class="profile">
+                    <div class="row">
+                        <img src="./img/pfp-img.jpg" alt="Profile Picture">
+                        <div class="file-upload">
+                            <label for="upload" class="file-upload-label btn btn-subtle"><span
+                                    class="file-upload-text">Upload new picture</span></label>
+                            <input type="file" class="file-upload-input" id="upload">
+                            <button class="btn btn-subtle">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="grid">
+                        <div class="name">
+                            <label for="input-name">Name</label>
+                            <input type="text" class="input-form" id="input-name" required>
+                        </div>
+                        <div class="email">
+                            <label for="input-email">Email</label>
+                            <input type="email" class="input-form" id="input-email">
+                        </div>
+                        <div class="password">
+                            <label for="input-password">Password</label>
+                            <div class="password-input">
+                                <input type="password" class="input-form" id="input-password">
+                                <div class="password-btn">
+                                    <i class="far fa-eye" id="password-btn" title="Show Password"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="password-strength">
+                        <div class="password-strength-meter">
+                            <p></p>
+                        </div>
+                        <div class="password-strength-quality">
+                            <p>Password strength: <span>Bad</span></p>
+                        </div>
+                    </div>
+                    <div class="password-strength-requirement">                       
+                            <ul>
+                                <li><i class="fa-solid fa-xmark"></i><span>At least six characters</span></li>
+                                <li><i class="fa-solid fa-xmark"></i><span>At least one special character</span></li>
+                                <li><i class="fa-solid fa-xmark"></i><span>At least one uppercase character</span></li>
+                            </ul>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
