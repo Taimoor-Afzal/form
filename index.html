@@ -11,11 +11,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <form>
-            <fieldset>
+    <!-- ------------------------------ step 1 ------------------------------- -->
+    <form>
+        <fieldset class="current" id="field-1">
+            <div class="container max-width">
                 <header class="header">
-                    <p>Step 1 </p>
+                    <p>Step 1</p>
                     <h1>Account Info</h1>
                 </header>
                 <div class="profile">
@@ -51,24 +52,159 @@
                     </div>
                     <div class="password-strength">
                         <div class="password-strength-meter">
-                            <p></p>
+                            <div class="strength-meter-range"></div>
+                            <div class="strength-meter"></div>
                         </div>
                         <div class="password-strength-quality">
                             <p>Password strength: <span>Bad</span></p>
                         </div>
                     </div>
-                    <div class="password-strength-requirement">                       
-                            <ul>
-                                <li><i class="fa-solid fa-xmark"></i><span>At least six characters</span></li>
-                                <li><i class="fa-solid fa-xmark"></i><span>At least one special character</span></li>
-                                <li><i class="fa-solid fa-xmark"></i><span>At least one uppercase character</span></li>
-                            </ul>
+                    <div class="password-strength-requirement">
+                        <ul>
+                            <li class="length-char"><i class="fa-solid fa-minus"></i><span>At least six
+                                    characters</span></li>
+                            <li class="special-char"><i class="fa-solid fa-minus"></i><span>At least one special
+                                    character</span></li>
+                            <li class="uppercase-char"><i class="fa-solid fa-minus"></i><span>At least one uppercase
+                                    character</span></li>
+                        </ul>
                     </div>
                 </div>
-            </fieldset>
-        </form>
-    </div>
+        </fieldset>
+        <!-- ------------------------------ step 2 ------------------------------- -->
 
+        <fieldset class="" id="field-2">
+            <div class="container max-width">
+                <header class="header">
+                    <p>Step 2</p>
+                    <h1>Product</h1>
+                </header>
+                <div class="main-content extra-margin">
+                    <p>Select a product:</p>
+                    <div class="products">
+                        <div class="grid">
+                            <div class="product-item">
+                                <img src="./img/product-1.jpg" alt="Product 1">
+                                <div class="product-item-content">
+                                    <h4>Product One</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <div class="product-icon icon-hide">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <img src="./img/product-2.jpg" alt="Product 2">
+                                <div class="product-item-content">
+                                    <h4>Product Two</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <div class="product-icon icon-hide">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <img src="./img/product-3.jpg" alt="Product 3">
+                                <div class="product-item-content">
+                                    <h4>Product Three</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <div class="product-icon icon-hide">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <img src="./img/product-4.jpg" alt="Product 4">
+                                <div class="product-item-content">
+                                    <h4>Product Four</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                                <div class="product-icon icon-hide">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <!-- ------------------------------ step 3 ------------------------------- -->
+
+        <fieldset class="" id="field-3">
+            <div class="container max-width">
+                <header class="header">
+                    <p>Step 3</p>
+                    <h1>Contact</h1>
+                </header>
+                <div class="main-content">
+                    <p>Select a contact method:</p>
+                    <div class="choice-buttons">
+                        <div class="choice-btn focus">
+                            <div class="choice-btn-fallback">
+                                <div class="checkbox-input-box">
+                                    <input type="checkbox" class="checkbox-input checked
+                                    " id="phone-call">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <label for="phone-call">Phone call</label>
+                                <p>Phone Call</p>
+                            </div>
+                        </div>
+                        <div class="choice-btn">
+                            <div class="choice-btn-fallback">
+                                <div class="checkbox-input-box">
+                                    <input type="checkbox" class="checkbox-input" id="video-call">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <label for="video-call">Video call</label>
+                                <p>Video Call</p>
+                            </div>
+                        </div>
+                        <div class="choice-btn">
+                            <div class="choice-btn-fallback">
+                                <div class="checkbox-input-box">
+                                    <input type="checkbox" class="checkbox-input" id="email">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <label for="email">Email</label>
+                                <p>Email</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <!-- ------------------------------ Footer ------------------------------- -->
+        <footer>
+            <div class="container">
+                <div class="grid">
+                    <div class="back">
+                        <button class="btn btn-subtle vs-hidden" id="back-btn"><i class="fa-solid fa-arrow-left"></i>Back</button>
+                    </div>
+                    <div class="form-steps">
+                        <p>Step <span class="current-step">2</span> of 3</p>
+                        <div class="indicator">
+                            <div class="indicator-range"></div>
+                            <div class="indicator-width"></div>
+                        </div>
+                    </div>
+                    <div class="next-submit">
+                        <div class="next">
+                            <button class="btn btn-primary" id="next-btn">Next<i
+                                    class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="submit">
+                            <button class="btn btn-primary" id="submit-btn"><i
+                                    class="fa-solid fa-check"></i>Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 
