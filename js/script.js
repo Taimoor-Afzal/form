@@ -29,6 +29,7 @@ passwordBtn.addEventListener("click", function () {
 
 // --------------- Password Strength Meter & Requirement Checker ---------------
 
+let passStrength = document.querySelector(".password-strength")
 let strengthMeter = document.querySelector('.strength-meter');
 
 let lengthOfChar = document.querySelector('.length-char');
@@ -41,9 +42,18 @@ let uppercaseCharIcon = document.querySelector('.uppercase-char i');
 
 passwordinput.addEventListener("input", function () {
 
+
     let strength = 25;
     let password = passwordinput.value;
-    let psStrength = document.querySelector('.password-strength-quality span')
+    let strengthTxt = document.querySelector('.password-strength-quality span')
+
+    // -------------- display meter -------------
+    if (password.length >= 1) {
+        passStrength.classList.remove("strength-hidden")
+    } else {
+        passStrength.classList.add("strength-hidden")
+    }
+    // -------------- requirement -------------
 
     if (password.length >= 6) {
         lengthOfChar.style.color = "hsl(170, 78%, 26%)";
@@ -81,16 +91,16 @@ passwordinput.addEventListener("input", function () {
     strengthMeter.style.setProperty('--strength', strength)
     if (strength >= 0 && strength <= 25) {
         strengthMeter.style.backgroundColor = "hsl(342, 89%, 48%)"
-        psStrength.innerText = "Bad";
+        strengthTxt.innerText = "Bad";
     } else if (strength > 25 && strength <= 50) {
         strengthMeter.style.backgroundColor = "hsl(35, 79%, 66%)"
-        psStrength.innerText = "Week";
+        strengthTxt.innerText = "Week";
     } else if (strength > 50 && strength <= 75) {
         strengthMeter.style.backgroundColor = "hsl(170, 78%, 36%)"
-        psStrength.innerText = "Good";
+        strengthTxt.innerText = "Good";
     }
     else if (strength > 75) {
-        psStrength.innerText = "Strong";
+        strengthTxt.innerText = "Strong";
     }
 });
 
@@ -168,14 +178,40 @@ $(document).ready(function () {
 
 let backBtn = document.getElementById("back-btn");
 let nextBtn = document.getElementById("next-btn");
+let submitBtn = document.getElementById("submit-btn");
+
+let fieldOne = document.getElementById("field-1");
+let fieldTwo = document.getElementById("field-2");
+let fieldThree = document.getElementById("field-3");
+
+let indicatorWidth = document.querySelector(".indicator-width");
+let currentStep = document.querySelector(".current-step");
 
 nextBtn.addEventListener("click", function () {
-    let fieldOne = document.getElementById("field-1")
-    let fieldTwo = document.getElementById("field-2")
-    let fieldThree = document.getElementById("field-3")
-
-    if (fieldTwo.classList.contains("current")) {
+    if (fieldOne.classList.contains("current")) {
         backBtn.style.visibility = "visible";
+        currentStep.innerText = "2";
+        indicatorWidth.style.width = "67%";
+    }
+    if (fieldTwo.classList.contains("current")) {
+        indicatorWidth.style.width = "100%";
+        currentStep.innerText = "3";
+        submitBtn.classList.remove("none");
+        nextBtn.classList.add("none");
+    }
+})
+
+backBtn.addEventListener("click", function () {
+    if (fieldTwo.classList.contains("current")) {
+        backBtn.style.visibility = "hidden";
+        indicatorWidth.style.width = "33%";
+        currentStep.innerText = "1";
+    }
+    if (fieldThree.classList.contains("current")) {
+        indicatorWidth.style.width = "67%";
+        currentStep.innerText = "2";
+        submitBtn.classList.add("none");
+        nextBtn.classList.remove("none");
     }
 })
 

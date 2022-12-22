@@ -16,7 +16,7 @@
         <fieldset class="current" id="field-1">
             <div class="container max-width">
                 <header class="header">
-                    <p>Step 1</p>
+                    <p>Step 1 <span>of 3</span></p>
                     <h1>Account Info</h1>
                 </header>
                 <div class="profile">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="password">
                             <label for="input-password">Password</label>
-                            <div class="password-input">
+                            <div class="password-input ">
                                 <input type="password" class="input-form" id="input-password">
                                 <div class="password-btn">
                                     <i class="far fa-eye" id="password-btn" title="Show Password"></i>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="password-strength">
+                    <div class="password-strength strength-hidden">
                         <div class="password-strength-meter">
                             <div class="strength-meter-range"></div>
                             <div class="strength-meter"></div>
@@ -76,20 +76,20 @@
         <fieldset class="" id="field-2">
             <div class="container max-width">
                 <header class="header">
-                    <p>Step 2</p>
+                    <p>Step 2 <span>of 3</span></p>
                     <h1>Product</h1>
                 </header>
                 <div class="main-content extra-margin">
                     <p>Select a product:</p>
                     <div class="products">
                         <div class="grid">
-                            <div class="product-item">
+                            <div class="product-item select">
                                 <img src="./img/product-1.jpg" alt="Product 1">
                                 <div class="product-item-content">
                                     <h4>Product One</h4>
                                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
-                                <div class="product-icon icon-hide">
+                                <div class="product-icon">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
         <fieldset class="" id="field-3">
             <div class="container max-width">
                 <header class="header">
-                    <p>Step 3</p>
+                    <p>Step 3 <span>of 3</span></p>
                     <h1>Contact</h1>
                 </header>
                 <div class="main-content">
@@ -179,10 +179,10 @@
             <div class="container">
                 <div class="grid">
                     <div class="back">
-                        <button class="btn btn-subtle vs-hidden" id="back-btn"><i class="fa-solid fa-arrow-left"></i>Back</button>
+                        <button class="btn btn-subtle VShidden" id="back-btn"><i class="fa-solid fa-arrow-left"></i>Back</button>
                     </div>
                     <div class="form-steps">
-                        <p>Step <span class="current-step">2</span> of 3</p>
+                        <p>Step <span class="current-step">1</span> of 3</p>
                         <div class="indicator">
                             <div class="indicator-range"></div>
                             <div class="indicator-width"></div>
@@ -194,7 +194,7 @@
                                     class="fa-solid fa-arrow-right"></i></button>
                         </div>
                         <div class="submit">
-                            <button class="btn btn-primary" id="submit-btn"><i
+                            <button class="btn btn-primary none" id="submit-btn"><i
                                     class="fa-solid fa-check"></i>Submit</button>
                         </div>
                     </div>
