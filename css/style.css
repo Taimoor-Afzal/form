@@ -74,9 +74,6 @@ fieldset.current {
     visibility: visible;
     opacity: 1;
 }
-fieldset:not(.current){
-    left: 50px;
-}
 
 .max-width {
     max-width: 38rem;

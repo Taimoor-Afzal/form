@@ -164,18 +164,6 @@ choiceBtn.forEach(btn => {
 
 
 
-// $(document).ready(function () {
-//     $("#next-btn").click(function () {
-//         $("form").find("fieldset.current").next().addClass("current");
-//         $("form").find("fieldset.current").prev().removeClass("current");
-//     })
-//     $("#back-btn").click(function () {
-//         $("form").find("fieldset.current").prev().addClass("current");
-//         $("form").find("fieldset.current").next().removeClass("current");
-//     })
-// })
-
-
 $(document).ready(function () {
     $("#next-btn").click(function () {
         $("form").find("fieldset.current").next().addClass("current");
@@ -183,9 +171,10 @@ $(document).ready(function () {
     })
     $("#back-btn").click(function () {
         $("form").find("fieldset.current").prev().addClass("current");
-        $("form").find("fieldset.current").next().removeClass("current").animate({left: '-50px'}, "slow");
+        $("form").find("fieldset.current").next().removeClass("current");
     })
 })
+
 
 //   ------------ next, back & submit buttons ----------
 
