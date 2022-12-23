@@ -164,6 +164,18 @@ choiceBtn.forEach(btn => {
 
 
 
+// $(document).ready(function () {
+//     $("#next-btn").click(function () {
+//         $("form").find("fieldset.current").next().addClass("current");
+//         $("form").find("fieldset.current").prev().removeClass("current");
+//     })
+//     $("#back-btn").click(function () {
+//         $("form").find("fieldset.current").prev().addClass("current");
+//         $("form").find("fieldset.current").next().removeClass("current");
+//     })
+// })
+
+
 $(document).ready(function () {
     $("#next-btn").click(function () {
         $("form").find("fieldset.current").next().addClass("current");
@@ -171,10 +183,15 @@ $(document).ready(function () {
     })
     $("#back-btn").click(function () {
         $("form").find("fieldset.current").prev().addClass("current");
-        $("form").find("fieldset.current").next().removeClass("current");
+        $("form").find("fieldset.current").next().removeClass("current").animate({left: '-50px'}, "slow");
     })
 })
 
+//   ------------ next, back & submit buttons ----------
+
+
+let nextTab = document.querySelector(".next");
+let submitTab = document.querySelector(".submit");
 
 let backBtn = document.getElementById("back-btn");
 let nextBtn = document.getElementById("next-btn");
@@ -196,8 +213,8 @@ nextBtn.addEventListener("click", function () {
     if (fieldTwo.classList.contains("current")) {
         indicatorWidth.style.width = "100%";
         currentStep.innerText = "3";
-        submitBtn.classList.remove("none");
-        nextBtn.classList.add("none");
+        submitTab.classList.remove("none");
+        nextTab.classList.add("none");
     }
 })
 
@@ -210,8 +227,8 @@ backBtn.addEventListener("click", function () {
     if (fieldThree.classList.contains("current")) {
         indicatorWidth.style.width = "67%";
         currentStep.innerText = "2";
-        submitBtn.classList.add("none");
-        nextBtn.classList.remove("none");
+        submitTab.classList.add("none");
+        nextTab.classList.remove("none");
     }
 })
 

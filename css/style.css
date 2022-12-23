@@ -69,9 +69,13 @@ fieldset {
     transition: 0.3s;
 }
 
+
 fieldset.current {
     visibility: visible;
     opacity: 1;
+}
+fieldset:not(.current){
+    left: 50px;
 }
 
 .max-width {
@@ -543,8 +547,8 @@ footer {
     visibility: hidden;
 }
 
-#next-btn.none,
-#submit-btn.none {
+.next.none,
+.submit.none {
     display: none;
 }
 
@@ -672,7 +676,8 @@ footer {
         display: none;
     }
 
-    .next {
+    .next,
+    .submit {
         width: 100%;
         display: flex;
         justify-content: center;
